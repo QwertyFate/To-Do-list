@@ -1,0 +1,26 @@
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+    <h1> Its <%= kindtitle %>!</h1>
+</div>
+
+
+<div class="box">
+       <% for (var i = 0; i < newitemlist.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+            <p><%= newitemlist[i] %></p>
+        </div>
+      <%  }; %>   
+
+      <form class="item" action=<%= location %> method="post">
+
+        <input type="text" name="text" placeholder="whachagonnado" autocomplete="off"> 
+        <button type="submit">+</button> 
+    
+    </form>
+</div>
+ 
+
+
+<%- include("footer") -%>
